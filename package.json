@@ -1,25 +1,55 @@
 {
   "name": "hackreactor-groceries",
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "seed": "node ./db/seed_data/seed.js",
+    "test": "jest"
   },
   "author": "Beth Johnson",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "superagent": "^4.0.0",
+    "supertest": "^3.3.0",
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "express": "^4.15.0",
     "mysql": "^2.16.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "mysql2": "^1.6.4",
+    "nodemon": "^1.18.9",
+    "react": "^15.6.2",
+    "react-carousel-slider": "^2.0.13",
+    "react-dom": "^15.6.2",
+    "react-native": "^0.57.8",
+    "react-native-cards-slider": "^0.1.2",
+    "react-responsive-carousel": "^3.1.45",
+    "react-scripts": "^2.1.2",
+    "react-slick": "^0.23.2",
+    "react-swipeable": "^4.3.1",
+    "sequelize": "^4.42.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^4.1.3"
   }
 }
