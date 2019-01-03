@@ -2,7 +2,7 @@ const props = require('../model.js');
 
 function seed() {
   let demi_data = [];    
-    for( var i = 11111; i < 11122; i++){
+    for( var i = 11111; i < 11212; i++){
             let temp = [];
             demi_data.push({
             link_id: i,
