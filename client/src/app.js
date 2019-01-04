@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from './carousel.js';
+import './style.css';
 
 class App extends React.Component {
   constructor(props){
