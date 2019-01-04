@@ -36,3 +36,5 @@ bower_components/
 
 # bundle
 client/dist/bundle.js
+
+package-lock.json

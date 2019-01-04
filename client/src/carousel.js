@@ -21,12 +21,12 @@ class Carousel extends React.Component {
   }
   
   getItem(id) {
-    axios.get(`http://localhost:4000/api/${id}`)
+    axios.get(`/api/${id}`)
       .then(data => {this.setState({homes: data.data}); console.log(this.state.homes, 'whaaat this???'); this.get_three(this.state.click)});
   }
 
   change_fave(id){
-    axios.put(`http://localhost:4000/api/${id}`)
+    axios.put(`/api/${id}`)
       .then(() => {
         console.log('fave clicked')});
   }
