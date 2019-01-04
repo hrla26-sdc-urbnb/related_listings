@@ -17,18 +17,16 @@ class Carousel extends React.Component {
   }
   componentDidMount(){
     this.getItem(11111);
-    console.log('TEEEEMP', this.state.current_homes)
+    //console.log('TEEEEMP', this.state.current_homes)
   }
   
   getItem(id) {
-    axios.get(`/api/${id}`)
+    axios.get(`http://54.173.112.54:4000/api/${id}`)
       .then(data => {this.setState({homes: data.data}); console.log(this.state.homes, 'whaaat this???'); this.get_three(this.state.click)});
   }
 
   change_fave(id){
-    axios.put(`/api/${id}`)
-      .then(() => {
-        console.log('fave clicked')});
+    axios.put(`http://54.173.112.54:4000/api/${id}`);
   }
 
   change_image(id){
