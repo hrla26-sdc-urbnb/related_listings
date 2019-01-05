@@ -21,12 +21,14 @@ class Carousel extends React.Component {
   }
   
   getItem(id) {
-    axios.get(`http://54.173.112.54:4000/api/${id}`)
-      .then(data => {this.setState({homes: data.data}); console.log(this.state.homes, 'whaaat this???'); this.get_three(this.state.click)});
-  }
+    axios.get(`api/${id}`)
+      .then(data => {this.setState({homes: data.data}); this.get_three(this.state.click)});
+      //http://54.173.112.54:4000/api/${id}
+    }
 
   change_fave(id){
-    axios.put(`http://54.173.112.54:4000/api/${id}`);
+    axios.put(`/api/${id}`);
+    // http://54.173.112.54:4000/api/${id}
   }
 
   change_image(id){
@@ -49,12 +51,14 @@ class Carousel extends React.Component {
     let temp = this.state.click;
     temp += 1;
     this.setState({click: temp});
+    this.get_three(temp);
   }
 
   decrease_click(){
     let temp = this.state.click;
     temp -= 1;
     this.setState({click: temp});
+    this.get_three(temp);
   }
   
   render(){
@@ -66,7 +70,7 @@ class Carousel extends React.Component {
           return (
               <Item key={index} changeFave={this.change_fave} id={item.id} favorite={item.favorite} image={item.pic} spec={item.specs} bed={item.bed_num} desc={item.description} cost={item.cost} star={item.stars} rate={item.ratings_num} /> 
           )})} 
-          {this.state.click === 4 ? '' : (<button id='right_button' onClick={this.increase_click}><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/new_right_arrow.png'></img></button>)}
+          {this.state.click === 7 ? '' : (<button id='right_button' onClick={this.increase_click}><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/new_right_arrow.png'></img></button>)}
         </div>
       </div>    
     )

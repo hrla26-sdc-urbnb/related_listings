@@ -59,12 +59,15 @@
   border-radius: 5px;
 }
 
-/* #btn {
-  position: absolute;
+#btn {
+  /* position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-} */
+  height: 0; */
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
 #first_line{
   color: rgb(155, 49, 67);

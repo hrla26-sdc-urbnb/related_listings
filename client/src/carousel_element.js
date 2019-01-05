@@ -12,8 +12,9 @@ class Item extends React.Component {
     this.change_fave = this.change_fave.bind(this);
   }
   change_fave(id){
-    axios.put(`http://54.173.112.54:4000/api/${id}`)
+    axios.put(`/api/${id}`)
       .then(() => {this.change_itme(id)});
+      //http://54.173.112.54:4000/api/${id}
   }
 
   change_image(id){
