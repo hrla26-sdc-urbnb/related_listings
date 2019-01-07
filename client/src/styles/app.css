@@ -1,0 +1,24 @@
+.header_related_listings {
+  display: flex;
+  align-items: start;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  word-wrap: break-word;
+  font-size: 24px;
+  font-weight: 800;
+  color: #484848;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+} 
+
+.headerSpacing{
+  width: 10%;
+}
+
+@media (min-width: 1400px) {
+  body {
+  }
+  .headerSpacing{
+    width: 12%;
+  }
+}

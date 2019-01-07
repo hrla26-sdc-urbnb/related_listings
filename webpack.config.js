@@ -10,19 +10,27 @@ module.exports = {
   },
   
   module : {
-    loaders : [
+    rules : [
       {
-        test : /\.js?/,
+        test : /\.js[x]?/,
         include : SRC_DIR,
         loader : 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['@babel/preset-react', '@babel/preset-env']
        }
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      }
+        loader: 'style-loader',
+    },
+    {
+        test: /\.css$/,
+        loader: 'css-loader',
+        query: {
+        modules: true,
+        localIdentName: '[name]__[local]__[hash:base64:5]',
+        },
+    },
     ]
   }
 };

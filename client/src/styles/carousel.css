@@ -1,0 +1,55 @@
+.makeInline{
+    display: flex;
+    padding-top: 0px;
+  }
+  
+  .rightButton{
+    background-color:transparent;  
+    border: transparent;
+    cursor: pointer;
+  }
+  .rightButton img{
+    /* display: flex;
+    align-items: center; */
+    padding-top: 100%;
+    height: 30px;
+    width: 30px;
+  
+  }
+  .rightButtonContainer{
+    padding-top: 5%;
+    width:10%;
+  }
+  
+  .leftButton{
+    background-color:transparent;  
+    border: transparent;
+    cursor: pointer;
+  }
+  
+  .leftButton img{
+    display: flex;
+    align-items: left;
+    align-items: center;
+    padding-top: 100%;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .leftButtonContainer{
+    padding-top: 5%;
+    width:10%;
+  }
+
+    @media (min-width: 1200px) {
+    .rightButtonContainer{
+      height:  300px;
+      width:50%;
+    }
+  
+    .leftButtonContainer{
+      height:  300px;
+      width:50%;
+    }
+  }
+ 

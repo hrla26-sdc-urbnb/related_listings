@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Item from './carousel_element.js';
+import styles from './styles/carousel.css'
 
 class Carousel extends React.Component {
   constructor(props){
@@ -64,13 +65,13 @@ class Carousel extends React.Component {
   render(){
     return(
       <div>
-        <div id='make_inline'>
-          {this.state.click > 0 ? (<button id='left_button' onClick={this.decrease_click} ><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/arrow_left.png'></img></button>) : ''}
+        <div className={styles.makeInline}>
+         <div className={styles.leftButtonContainer}>{this.state.click > 0 ? (<button className={styles.leftButton} onClick={this.decrease_click} ><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/new_left_arrow+.png'></img></button>) : (<button className={styles.rightButton} onClick={this.decrease_click}><img  src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-05+at+5.14.03+PM.png'></img></button>)}</div>
          {this.state.current_homes.map((item, index) => {
           return (
               <Item key={index} changeFave={this.change_fave} id={item.id} favorite={item.favorite} image={item.pic} spec={item.specs} bed={item.bed_num} desc={item.description} cost={item.cost} star={item.stars} rate={item.ratings_num} /> 
           )})} 
-          {this.state.click === 7 ? '' : (<button id='right_button' onClick={this.increase_click}><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/new_right_arrow.png'></img></button>)}
+          <div className={styles.rightButtonContainer}>{this.state.click === 7 ? (<button className={styles.rightButton} onClick={this.increase_click}><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-05+at+5.14.03+PM.png'></img></button>) : (<button className={styles.rightButton} onClick={this.increase_click}><img src='https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/new_right_arrow.png'></img></button>)}</div>
         </div>
       </div>    
     )

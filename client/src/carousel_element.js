@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import styles from './styles/carousel_element.css';
 
 class Item extends React.Component {
 
@@ -13,7 +14,7 @@ class Item extends React.Component {
   }
   change_fave(id){
     axios.put(`/api/${id}`)
-      .then(() => {this.change_itme(id)});
+      .then(() => {this.change_image(id)});
       //http://54.173.112.54:4000/api/${id}
   }
 
@@ -27,16 +28,20 @@ class Item extends React.Component {
 
   render() {
     return (
-      <div id='carousel'>
-        <div id="container">
-          <img id='images_related_listings' src={this.props.image}></img>
-          <button id='btn' onClick={() => this.change_fave(this.props.id)}><img src={(this.props.favorite === 0) ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+8.36.11+PM.png' : 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+10.33.11+PM.png'}/></button>
+      <div className={styles.carousel}> 
+        <div className={styles.container}>
+          <div className={styles.imgdiv}><img className={styles.images_related_listings} src={this.props.image}></img></div>
+          <button className={styles.btn} onClick={() => this.change_fave(this.props.id)}><img src={(this.props.favorite === 0) ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+8.36.11+PM.png' : 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+10.33.11+PM.png'}/></button>
         </div>
-        <div >
-          <div id='first_line'>{this.props.spec}{' • '}{this.props.bed} {(this.props.bed === 1) ? ' bed ' : ' beds '} </div>
-          <div id='second_line'>{this.props.desc} </div> 
-          <div id='third_line'>{this.props.cost} </div>
-          <div id='image_on_fourth'><img src={this.props.star === 5 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+7.14.59+PM.png' : (this.props.star === 4 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/4_STAARRRZ.png' : (this.props.star === 3 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/3_STAARRRZ.png' : (this.props.star === 2 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/2_STAARRRZ.png' : (this.props.star === 1 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/1_STAARRRZ+.png' : ' '))))}/><div id='fourth_line'>{' '}{this.props.rate}</div></div>
+        <div className='wrap'>
+          <p>
+          <div className={styles.first_line}>{this.props.spec}{' • '}{this.props.bed} {(this.props.bed === 1) ? ' bed ' : ' beds '} </div>
+          <div className={styles.second_line}>
+            {this.props.desc} 
+          </div> 
+          <div className={styles.third_line}>{this.props.cost} </div>
+          <div className={styles.image_on_fourth}><img src={this.props.star === 5 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/Screen+Shot+2019-01-02+at+7.14.59+PM.png' : (this.props.star === 4 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/4_STAARRRZ.png' : (this.props.star === 3 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/3_STAARRRZ.png' : (this.props.star === 2 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/2_STAARRRZ.png' : (this.props.star === 1 ? 'https://s3-us-west-1.amazonaws.com/similar-listings-targaryen/1_STAARRRZ+.png' : ' '))))}/><div id='fourth_line'>{' '}{this.props.rate}</div></div>
+          </p>
           <br/>
         </div>
       </div>    

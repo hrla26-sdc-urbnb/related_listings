@@ -1,57 +1,8 @@
-#_container_ {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-#review {
-  display: flex;
-  justify-content: flex-start;
-  margin: 90px !important;
-  width: 550px !important;
-}
-
-#similar_listings {
-  margin-left: 90px !important; 
-}
-
-#header_related_listings {
-    display: flex;
-    justify-content: start; 
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-    margin: 0px !important;
-    word-wrap: break-word !important;
-    font-size: 24px !important;
-    font-weight: 800 !important;
-    line-height: 1.25em !important;
-    color: #484848 !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-  } 
-  /* #images_related_listings{
-    position: relative;
-    width:  400px;
-    height: 250px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-    border-radius: 4px;
-  } */
-  
-  /* Container needed to position the button. Adjust the width as needed */
-  #container {
-    position: relative;
-    width:  350px;
-    height: 225px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-    border-radius: 4px;
-    /* padding: 12px 12px; */
+.carousel {
+    padding: 0px 8px;
+    width: 100%;
   }
-  
-  /* Make the image responsive */
-  #container img {
+  .container {
     position: relative;
     width:  350px;
     height: 225px;
@@ -61,7 +12,18 @@
     border-radius: 4px;
   }
   
-  #btn img{
+  .container img {
+    position: relative;
+    width:  350px;
+    height: 225px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    border-radius: 4px;
+    cursor: pointer; 
+  }
+  
+  .btn img{
     width: 25px;
     height: 20px;
     position: absolute;
@@ -76,14 +38,13 @@
     border-radius: 5px;
   }
   
-  /* #btn {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-  } */
+  .btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
   
-  #first_line{
+  .first_line{
     color: rgb(155, 49, 67);
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     font-size: 12px !important;
@@ -91,7 +52,7 @@
     line-height: 1.3333333333333333em !important;
   }
   
-  #second_line{
+  .second_line{
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     margin: 0px !important;
     word-wrap: break-word !important;
@@ -99,9 +60,19 @@
     font-weight: 800 !important;
     line-height: 1.375em !important;
     color: #484848 !important;
+    display: inline-block;
+  }
+  .wrap {
+    display: table;
+    height:  245px;
+    width:   300px;
+  }
+  .wrap p {
+    display: table-cell;
+    vertical-align: top;
   }
   
-  #third_line{
+  .third_line{
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
     margin: 0px !important;
     word-wrap: break-word !important;
@@ -111,7 +82,7 @@
     color: #484848 !important;
   }
   
-  #fourth_line{
+  .fourth_line{
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     overflow-wrap: break-word !important;
     font-size: 12px !important;
@@ -123,30 +94,14 @@
     vertical-align: middle;
   }
   
-  #image_on_fourth img{
+  .image_on_fourth img{
     height: 15px;
     width: 70px;  
   }
-  
-  #make_inline{
-    display: flex;
-    align-items: center; 
-    justify-content: space-around; 
+
+
+  .imgdiv {
+      width:90/3%;
+      height:250px;
   }
-  
-  #right_button{
-    display: flex;
-    align-items: center;
-    background-color:transparent;  
-    border: transparent;
-    cursor: pointer;
-  }
-  
-  #left_button{
-    display: flex;
-    align-items: baseline;
-    background-color:transparent;  
-    border: transparent;
-    cursor: pointer;
-    justify-content: end; 
-  }
+

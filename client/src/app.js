@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from './carousel.js';
-import './style.css';
+import  styles from './styles/app.css';
 
 class App extends React.Component {
   constructor(props){
@@ -12,8 +12,8 @@ class App extends React.Component {
   
   render(){
     return(
-      <div>
-        <h1 id='header_related_listings'>Similar listings</h1><br/>
+      <div className={styles.appInline}>
+        <h1 className={styles.header_related_listings}><div className={styles.headerSpacing}></div>Similar listings</h1><br/>
         <div>
           <Carousel />
         </div>
