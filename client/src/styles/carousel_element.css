@@ -46,20 +46,20 @@
   
   .first_line{
     color: rgb(155, 49, 67);
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-    font-size: 12px !important;
-    font-weight: 800 !important;
-    line-height: 1.3333333333333333em !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.3333333333333333em;
   }
   
   .second_line{
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-    margin: 0px !important;
-    word-wrap: break-word !important;
-    font-size: 16px !important;
-    font-weight: 800 !important;
-    line-height: 1.375em !important;
-    color: #484848 !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    margin: 0px;
+    word-wrap: break-word;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.375em;
+    color: #484848;
     display: inline-block;
   }
   .wrap {
@@ -73,23 +73,23 @@
   }
   
   .third_line{
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-    margin: 0px !important;
-    word-wrap: break-word !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    line-height: 1.2857142857142858em !important;
-    color: #484848 !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    margin: 0px;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2857142857142858em;
+    color: #484848;
   }
   
   .fourth_line{
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
-    overflow-wrap: break-word !important;
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    line-height: 1.33333em !important;
-    color: rgb(72, 72, 72) !important;
-    margin: 0px !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    overflow-wrap: break-word;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.33333em;
+    color: rgb(72, 72, 72);
+    margin: 0px;
     display: inline;
     vertical-align: middle;
   }
