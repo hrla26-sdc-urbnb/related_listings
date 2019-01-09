@@ -22,13 +22,13 @@ class Carousel extends React.Component {
   }
   
   getItem(id) {
-    axios.get(`http://54.173.112.54:4000/api/${id}`)
+    axios.get(`http://127.0.0.1:4000/api/${id}`)
       .then(data => {this.setState({homes: data.data}); this.get_three(this.state.click)});
       //http://54.173.112.54:4000/api/${id}
     }
 
   change_fave(id){
-    axios.put(`http://54.173.112.54:4000/api/${id}`);
+    axios.put(`http://127.0.0.1:4000/api/${id}`);
     // http://54.173.112.54:4000/api/${id}
   }
 

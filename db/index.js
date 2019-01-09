@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('Similar_Listings', 'root', 'password',{
+const sequelize = new Sequelize('Similar_Listings', 'root', '',{
   host: 'localhost',
   dialect: 'mysql',
 
