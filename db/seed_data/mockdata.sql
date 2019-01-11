@@ -14,5 +14,4 @@ create table Properties (
     favorite INT
 );
 
-LOAD DATA LOCAL INFILE './data.csv' INTO TABLE Properties FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'  ignore 1 lines;
-LOAD DATA LOCAL INFILE './data2.csv' INTO TABLE Properties FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'  ignore 1 lines;
+LOAD DATA LOCAL INFILE '../../../data.csv' INTO TABLE Properties FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'  ignore 1 lines;

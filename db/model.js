@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./index.js');
 
-const Props = sequelize.define('Properties', {
+const Props = sequelize.define('properties', {
   link_id: Sequelize.INTEGER,
   bed_num: Sequelize.INTEGER,
   specs: Sequelize.STRING,
@@ -10,11 +10,12 @@ const Props = sequelize.define('Properties', {
   cost: Sequelize.STRING,
   stars: Sequelize.INTEGER,
   ratings_num: Sequelize.INTEGER,
-  favorite: Sequelize.INTEGER
-  
+  favorite: Sequelize.INTEGER,
+},
+{
+  timestamps: false,
 });
 
 Props.sync();
 
 module.exports = Props;
-

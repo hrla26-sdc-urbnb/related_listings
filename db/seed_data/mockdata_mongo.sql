@@ -1,0 +1,1 @@
+mongoimport -d similar_listings -c properties --type csv --file /Users/eniac/sdc/data.csv --headerline

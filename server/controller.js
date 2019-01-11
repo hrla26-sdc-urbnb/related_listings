@@ -4,7 +4,8 @@ module.exports = {
   get: (req, res) => {
     console.log('GEEEETT');
     let {link_id} = req.params;
-    db.findAll({where: {link_id}})
+    console.log(link_id)
+    db.findAll({ where: {link_id} })
     .then(data => res.status(200).send(data))
     .catch(err => console.error(err)); 
   },

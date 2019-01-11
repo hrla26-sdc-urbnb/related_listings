@@ -3,9 +3,10 @@ const path = require('path');
 const faker = require('faker');
 
 const start_time = Date.now();
-const header_string = 'id, link_id, bed_num, specs, pic, description, cost, stars, ratings_num, favorite \n';
+const header_string = 'id, link_id, bed_num, specs, pic, description, cost, stars, ratings_num, favorite, createdAt, updatedAt \n';
+// const header_string = '\n';
 
-const writeStream = fs.createWriteStream('data.csv');
+const writeStream = fs.createWriteStream('../../../data.csv');
 writeStream.write(header_string);
 
 const bed_nums = [0, 1, 2, 3, 4, 5, 6];
@@ -24,16 +25,16 @@ const pics = [
 ];
 
 const descriptions = [
-  'Oceanfront House, Hot Tub, *Best Price on Beach*',
-  'Private, Spacious, n Airy Creative',
+  'Oceanfront House Hot Tub *Best Price on Beach*',
+  'Private Spacious n Airy Creative',
   'Rose Bowl fan-Private home! Easy access',
   'Silicon Beach Condo 2BD 2BTH - Trendy Playa Vista',
-  'Oceanfront House, Hot Tub, *Best Price on Beach*',
-  'Bright & Spacious, Renovated Luxurious Townhome',
+  'Oceanfront House Hot Tub *Best Price on Beach*',
+  'Bright & Spacious Renovated Luxurious Townhome',
   'Lush Mediterranean Retreat',
   'Cozy 1 Bedroom apartment',
   "JOEY\'s Place",
-  "'The Hydeaway'",
+  "'The Hydeaway",
 ];
 
 const costs = [
@@ -68,14 +69,15 @@ function writeOneMillionTimes(writer, encoding, callback) {
       row_string += `${bed_nums[i % 7]}, `;
       row_string += `${specs[i % 5]}, `;
       row_string += `${pics[i % 10]}, `;
-      row_string += `"${descriptions[i % 10]}", `;
+      row_string += `"${Math.floor(i / 10)}_${descriptions[i % 10]}", `;
+      // row_string += `"${faker.company.companyName()}", `;
       row_string += `${costs[i % 10]}, `;
       row_string += `${stars[i % 9]}, `;
       row_string += `${ratings_num[i % 11]}, `;
-      row_string += `${favorites[i % 12]}`;
+      row_string += `${favorites[i % 12]}, `;
+      row_string += `${Date.now().toString()}, `;
+      row_string += `${Date.now().toString()}`;
       row_string += '\n';
-      writeStream.write(row_string);
-
       if (i === max) {
         writer.write(row_string, encoding, callback);
       } else {
