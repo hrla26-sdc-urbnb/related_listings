@@ -17,4 +17,8 @@ create table properties (
 );
 \COPY properties(id, link_id, bed_num, specs, pic, description, cost, stars, ratings_num, favorite, createdAt, updatedAt) FROM '../../../data.csv' DELIMITER ',' CSV HEADER;
 
+\COPY properties(id, link_id, bed_num, specs, pic, description, cost, stars, ratings_num, favorite, createdAt, updatedAt) FROM '/home/ubuntu/mount_point/data.csv' DELIMITER ',' CSV HEADER;
+
+
+\COPY properties(id, link_id, bed_num, specs, pic, description, cost, stars, ratings_num, favorite, createdAt, updatedAt) FROM '../../../home/ubuntu/data.csv' DELIMITER ',' CSV HEADER;
 CREATE INDEX link_id_index ON properties (link_id)
