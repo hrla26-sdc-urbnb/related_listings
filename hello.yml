@@ -1,0 +1,14 @@
+config:
+  target: 'http://localhost:4000'
+  processor: "./my-functions.js"
+  phases:
+    - duration: 300
+      arrivalRate: 375
+  defaults:
+    headers:
+      x-my-service-auth: '987401838271002188298567'
+scenarios:
+  - flow:
+    - function: "generateRandomData"
+    - get:
+        url: "/api/{{id}}"

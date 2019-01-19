@@ -33,6 +33,8 @@ select * from properties where newcol @@ to_tsquery('Tub');
 select * from properties where newcol @@ to_tsquery('Spacious');
 
 
+alter user ubuntu with encrypted password 'ubuntu';
+
 ALTER TABLE properties ADD COLUMN newcol tsvector;
 UPDATE properties SET newcol = to_tsvector(description);
 CREATE INDEX description_index ON properties USING gist(newcol);

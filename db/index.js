@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('similar_listings', 'ubuntu', 'ubuntu', {
-// const sequelize = new Sequelize('similar_listings', '', '', {
-
+// const sequelize = new Sequelize('similar_listings', 'ubuntu', 'ubuntu', {
+const sequelize = new Sequelize('similar_listings', '', '', {
+  logging: false,
   host: 'localhost',
   dialect: 'postgres',
 
